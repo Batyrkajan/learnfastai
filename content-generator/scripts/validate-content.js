@@ -14,6 +14,19 @@ class ContentValidator {
       "## 🌟 Real-World Application",
       "## 🚀 Next Steps",
     ];
+
+    this.rules = [
+      {
+        name: "Minimum length",
+        check: (content) => content.length >= 100,
+        message: "Content should be at least 100 characters long",
+      },
+      {
+        name: "Has headings",
+        check: (content) => content.includes("#"),
+        message: "Content should include at least one heading",
+      },
+    ];
   }
 
   async validateContent(filePath) {

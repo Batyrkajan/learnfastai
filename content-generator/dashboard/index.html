@@ -295,7 +295,7 @@
         };
 
         try {
-          const response = await fetch("/api/feedback", {
+          const response = await fetch("/.netlify/functions/feedback", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -341,7 +341,7 @@
       // Load existing feedback when the page loads
       async function loadExistingFeedback() {
         try {
-          const response = await fetch("/api/feedback");
+          const response = await fetch("/.netlify/functions/feedback");
           if (!response.ok) {
             throw new Error("Failed to load feedback");
           }

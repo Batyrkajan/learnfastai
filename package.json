@@ -5,7 +5,7 @@
   "main": "content-generator/server.js",
   "scripts": {
     "start": "node content-generator/server.js",
-    "build": "mkdir -p content-generator/dashboard && cp -r index.html css js content-generator/dashboard/",
+    "build": "mkdir -p content-generator/dashboard && cp -r index.html css js topics content-generator/dashboard/ && npm install",
     "dev": "cross-env NODE_ENV=development nodemon content-generator/server.js",
     "check-security": "npm audit"
   },
@@ -24,6 +24,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.18.2",
+    "marked": "^15.0.7",
     "mongodb": "^6.3.0",
     "node-fetch": "^2.7.0",
     "openai": "^4.86.2"

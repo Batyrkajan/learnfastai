@@ -10,20 +10,26 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dashboard")));
 
-const generator = new TopicGenerator();
-const validator = new ContentValidator();
-
-// Initialize the generator
+// Initialize services
+let generator = null;
+let validator = null;
 let generatorInitialized = false;
-generator
-  .initialize()
-  .then(() => {
+
+async function initializeServices() {
+  try {
+    generator = new TopicGenerator();
+    validator = new ContentValidator();
+    await generator.initialize();
     generatorInitialized = true;
     console.log("Topic generator initialized successfully");
-  })
-  .catch((error) => {
-    console.error("Failed to initialize topic generator:", error);
-  });
+  } catch (error) {
+    console.error("Failed to initialize services:", error);
+    // Continue running the server even if initialization fails
+  }
+}
+
+// Initialize services
+initializeServices();
 
 // Store feedback in a JSON file
 const FEEDBACK_FILE = path.join(__dirname, "data", "feedback.json");

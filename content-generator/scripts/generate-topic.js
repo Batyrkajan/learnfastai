@@ -1,82 +1,40 @@
-const ContentGenerator = require("./generate-content");
-const ContentValidator = require("./validate-content");
 const fs = require("fs").promises;
 const path = require("path");
+const ContentValidator = require("./validate-content");
 
 class TopicGenerator {
   constructor() {
-    this.generator = new ContentGenerator();
+    this.generator = {
+      config: {
+        topics: [
+          {
+            id: "ai-fundamentals",
+            title: "AI Fundamentals",
+            description: "Learn the core concepts of AI and machine learning",
+          },
+          {
+            id: "python-for-ai",
+            title: "Python for AI",
+            description: "Master Python programming for AI development",
+          },
+        ],
+      },
+    };
     this.validator = new ContentValidator();
   }
 
   async initialize() {
-    await this.generator.initialize();
+    // Placeholder for future initialization logic
+    return Promise.resolve();
   }
 
-  async generateTopic(topicName) {
-    console.log(`🚀 Generating content for topic: ${topicName}`);
-
-    const topic = this.generator.config.topics.find(
-      (t) => t.name === topicName
-    );
-    if (!topic) {
-      throw new Error(`Topic ${topicName} not found in configuration`);
-    }
-
-    const results = {
-      topic: topic.displayName,
-      modules: [],
-      validationReport: "",
+  async generateTopic(topic) {
+    // Placeholder for future topic generation logic
+    return {
+      success: true,
+      topic: topic,
+      message: "Topic generation is a placeholder for now",
     };
-
-    // Create topic directory if it doesn't exist
-    const topicDir = path.join(__dirname, "../../topics", topicName);
-    await this.generator.ensureDirectoryExists(topicDir);
-
-    // Generate topic index page
-    await this.generateTopicIndex(topic);
-
-    // Generate each module
-    for (const module of topic.modules) {
-      console.log(`\n📝 Generating module: ${module.title}`);
-
-      try {
-        const moduleResult = await this.generator.generateModule(
-          topicName,
-          module.title
-        );
-        console.log(`✅ Generated ${module.title}`);
-
-        // Validate content
-        console.log(`🔍 Validating ${module.title}`);
-        const validationResult = await this.validator.validateContent(
-          moduleResult.markdown
-        );
-
-        results.modules.push({
-          title: module.title,
-          files: moduleResult,
-          validation: validationResult,
-        });
-      } catch (error) {
-        console.error(`❌ Error generating ${module.title}:`, error);
-        results.modules.push({
-          title: module.title,
-          error: error.message,
-        });
-      }
-    }
-
-    // Generate validation report
-    results.validationReport = this.validator.generateReport(
-      results.modules.map((m) => m.validation).filter(Boolean)
-    );
-
-    // Save generation report
-    const reportPath = path.join(topicDir, "generation-report.md");
-    await this.saveGenerationReport(reportPath, results);
-
-    return results;
   }
 
   async generateTopicIndex(topic) {
