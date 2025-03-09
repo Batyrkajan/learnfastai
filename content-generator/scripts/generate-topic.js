@@ -1,157 +1,141 @@
+const OpenAI = require("openai");
 const fs = require("fs").promises;
 const path = require("path");
-const ContentValidator = require("./validate-content");
+const ContentGenerator = require("./generate-content");
 
 class TopicGenerator {
   constructor() {
-    this.generator = {
-      config: {
-        topics: [
-          {
-            id: "ai-fundamentals",
-            title: "AI Fundamentals",
-            description: "Learn the core concepts of AI and machine learning",
-          },
-          {
-            id: "python-for-ai",
-            title: "Python for AI",
-            description: "Master Python programming for AI development",
-          },
-        ],
-      },
-    };
-    this.validator = new ContentValidator();
+    this.openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    this.contentGenerator = new ContentGenerator();
   }
 
-  async initialize() {
-    // Placeholder for future initialization logic
-    return Promise.resolve();
+  async generateTopicStructure(topic) {
+    try {
+      const prompt = `Create a learning path for ${topic} following the 80/20 principle.
+      Break down the topic into 4-6 modules that cover the most important concepts.
+      For each module, provide:
+      1. Module title
+      2. Brief description
+      3. Key learning objectives
+      Format the response as a JSON array of module objects.`;
+
+      const completion = await this.openai.chat.completions.create({
+        model: "gpt-4-turbo-preview",
+        messages: [
+          { role: "system", content: "You are an expert curriculum designer." },
+          { role: "user", content: prompt },
+        ],
+        temperature: 0.7,
+        max_tokens: 1000,
+      });
+
+      return JSON.parse(completion.choices[0].message.content);
+    } catch (error) {
+      console.error("Error generating topic structure:", error);
+      throw error;
+    }
   }
 
   async generateTopic(topic) {
-    // Placeholder for future topic generation logic
-    return {
-      success: true,
-      topic: topic,
-      message: "Topic generation is a placeholder for now",
-    };
+    try {
+      console.log(`Generating topic structure for ${topic}...`);
+      const modules = await this.generateTopicStructure(topic);
+
+      console.log("Creating topic directory...");
+      const topicDir = path.join(__dirname, "..", "..", "topics", topic);
+      await fs.mkdir(path.join(topicDir, "modules"), { recursive: true });
+
+      console.log("Generating module content...");
+      for (const module of modules) {
+        console.log(`Generating content for module: ${module.title}`);
+        await this.contentGenerator.generateModuleContent(topic, module.title);
+      }
+
+      console.log("Creating topic index page...");
+      await this.createTopicIndex(topic, modules);
+
+      return {
+        topic,
+        moduleCount: modules.length,
+        modules: modules.map((m) => m.title),
+      };
+    } catch (error) {
+      console.error("Error generating topic:", error);
+      throw error;
+    }
   }
 
-  async generateTopicIndex(topic) {
-    const indexPath = path.join(
-      __dirname,
-      "../../topics",
-      `${topic.name}.html`
-    );
-
-    const html = `<!DOCTYPE html>
+  async createTopicIndex(topic, modules) {
+    const indexContent = `
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${topic.displayName} | LearnFast</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${topic} - LearnFast AI</title>
+    <link rel="stylesheet" href="../../shared/css/style.css">
+</head>
+<body>
     <header>
-      <div class="logo">
-        <a href="../index.html">LearnFast</a>
-      </div>
-      <nav>
-        <a href="../index.html#available-topics">Back to Topics</a>
-      </nav>
+        <nav>
+            <a href="../../index.html">Home</a>
+        </nav>
     </header>
-
     <main>
-      <section class="topic-header">
-        <h1>${topic.displayName}</h1>
-        <p class="topic-description">${topic.description}</p>
-      </section>
-
-      <section class="module-list">
-        ${topic.modules
-          .map(
-            (module) => `
-          <div class="module-card">
-            <h3>${module.title}</h3>
-            <p class="module-info">
-              <span class="difficulty">${module.difficulty}</span>
-              <span class="duration">${module.estimatedTime}</span>
-            </p>
-            <p class="module-topics">${module.keyTopics.join(" • ")}</p>
-            <a href="${topic.name}/modules/${this.generator.slugify(
-              module.title
-            )}.html" 
-               class="learn-more-button">Start Learning</a>
-          </div>
-        `
-          )
-          .join("\n")}
-      </section>
+        <h1>${topic}</h1>
+        <div class="module-grid">
+            ${modules
+              .map(
+                (module, index) => `
+                <div class="module-card">
+                    <h2>${module.title}</h2>
+                    <p>${module.description}</p>
+                    <h3>Learning Objectives:</h3>
+                    <ul>
+                        ${module.objectives
+                          .map((obj) => `<li>${obj}</li>`)
+                          .join("")}
+                    </ul>
+                    <a href="modules/${this.contentGenerator.sanitizeFilename(
+                      module.title
+                    )}.html" class="module-link">
+                        Start Module ${index + 1}
+                    </a>
+                </div>
+            `
+              )
+              .join("")}
+        </div>
     </main>
-
-    <footer>
-      <p>&copy; 2024 LearnFast. All rights reserved.</p>
-    </footer>
-  </body>
+</body>
 </html>`;
 
-    await fs.writeFile(indexPath, html);
-    console.log(`✅ Generated topic index page: ${indexPath}`);
-  }
-
-  async saveGenerationReport(reportPath, results) {
-    let report = `# Content Generation Report\n\n`;
-    report += `## Topic: ${results.topic}\n\n`;
-
-    report += `### Modules Generated\n\n`;
-    for (const module of results.modules) {
-      report += `#### ${module.title}\n`;
-      if (module.error) {
-        report += `❌ Error: ${module.error}\n\n`;
-      } else {
-        report += `✅ Successfully generated\n`;
-        report += `- Markdown: ${module.files.markdown}\n`;
-        report += `- HTML: ${module.files.html}\n\n`;
-      }
-    }
-
-    report += `\n### Validation Results\n\n`;
-    report += results.validationReport;
-
-    await fs.writeFile(reportPath, report);
-    console.log(`📊 Generation report saved to: ${reportPath}`);
+    const indexFile = path.join(
+      __dirname,
+      "..",
+      "..",
+      "topics",
+      `${topic}.html`
+    );
+    await fs.writeFile(indexFile, indexContent);
   }
 }
 
-// CLI interface
-async function main() {
-  try {
-    const generator = new TopicGenerator();
-    await generator.initialize();
-
-    const [, , topicName] = process.argv;
-
-    if (!topicName) {
-      console.error("Usage: node generate-topic.js <topicName>");
-      process.exit(1);
-    }
-
-    console.log(`Starting content generation for ${topicName}...`);
-    const results = await generator.generateTopic(topicName);
-    console.log("\n✨ Content generation completed!");
-    console.log(`📝 Generated ${results.modules.length} modules`);
-    console.log(
-      `📊 Check the generation report in topics/${topicName}/generation-report.md`
-    );
-  } catch (error) {
-    console.error("Error generating topic:", error);
+// Command line interface
+if (require.main === module) {
+  const [topic] = process.argv.slice(2);
+  if (!topic) {
+    console.error("Usage: node generate-topic.js <topic>");
     process.exit(1);
   }
-}
 
-if (require.main === module) {
-  main();
+  const generator = new TopicGenerator();
+  generator
+    .generateTopic(topic)
+    .then(() => process.exit(0))
+    .catch(() => process.exit(1));
 }
 
 module.exports = TopicGenerator;

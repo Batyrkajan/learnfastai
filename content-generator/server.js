@@ -3,9 +3,14 @@ const path = require("path");
 const TopicGenerator = require("./scripts/generate-topic");
 const ContentValidator = require("./scripts/validate-content");
 const fs = require("fs").promises;
+const { MongoClient } = require("mongodb");
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// MongoDB connection
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/learnfast";
+const client = new MongoClient(uri);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "dashboard")));
@@ -125,51 +130,53 @@ app.post("/api/validate", async (req, res) => {
 // Feedback endpoints
 app.post("/api/feedback", async (req, res) => {
   try {
-    const feedback = {
-      ...req.body,
-      id: Date.now().toString(),
-      timestamp: new Date().toISOString(),
-    };
-
-    // Validate feedback data
-    if (!feedback.type || !feedback.title || !feedback.content) {
+    const { type, title, details } = req.body;
+    if (!type || !title || !details) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    let feedbackData = [];
-    try {
-      const fileContent = await fs.readFile(FEEDBACK_FILE, "utf-8");
-      feedbackData = JSON.parse(fileContent);
-    } catch (error) {
-      console.error("Error reading feedback file:", error);
-      // Initialize with empty array if file doesn't exist or is corrupted
-      await fs.writeFile(FEEDBACK_FILE, JSON.stringify([]));
-    }
+    const feedback = {
+      id: Date.now().toString(),
+      type,
+      title,
+      details,
+      timestamp: new Date().toISOString(),
+    };
 
-    feedbackData.unshift(feedback);
+    const feedbackData = JSON.parse(await fs.readFile(FEEDBACK_FILE, "utf8"));
+    feedbackData.push(feedback);
     await fs.writeFile(FEEDBACK_FILE, JSON.stringify(feedbackData, null, 2));
 
     res.json(feedback);
-  } catch (error) {
-    console.error("Error saving feedback:", error);
+  } catch (err) {
     res.status(500).json({ error: "Failed to save feedback" });
   }
 });
 
 app.get("/api/feedback", async (req, res) => {
   try {
-    const fileContent = await fs.readFile(FEEDBACK_FILE, "utf-8");
-    const feedbackData = JSON.parse(fileContent);
+    const feedbackData = JSON.parse(await fs.readFile(FEEDBACK_FILE, "utf8"));
     res.json(feedbackData);
-  } catch (error) {
-    console.error("Error reading feedback:", error);
-    res.status(500).json({ error: "Failed to load feedback" });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch feedback" });
   }
 });
 
-// Start server
-app.listen(port, () => {
-  console.log(
-    `Content generator dashboard running at http://localhost:${port}`
-  );
-});
+// Initialize and start server
+async function startServer() {
+  try {
+    await ensureDataDir();
+    await initializeFeedback();
+    await client.connect();
+    console.log("Connected to MongoDB");
+
+    app.listen(port, () => {
+      console.log(`Server running at http://localhost:${port}`);
+    });
+  } catch (err) {
+    console.error("Failed to start server:", err);
+    process.exit(1);
+  }
+}
+
+startServer();

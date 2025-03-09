@@ -181,6 +181,63 @@ Where to go from here.`;
       }
     }
   }
+
+  async generateModuleContent(topic, moduleName) {
+    try {
+      const prompt = `Create an educational module about ${moduleName} for the topic ${topic}.
+      The content should follow the 80/20 principle, focusing on the most important concepts.
+      Include:
+      1. A clear introduction
+      2. Key concepts with examples
+      3. Practical applications
+      4. A summary
+      5. Next steps for learning
+      Format the content in HTML with appropriate semantic tags and styling classes.`;
+
+      const completion = await this.openai.chat.completions.create({
+        model: "gpt-4-turbo-preview",
+        messages: [
+          {
+            role: "system",
+            content: "You are an expert educational content creator.",
+          },
+          { role: "user", content: prompt },
+        ],
+        temperature: 0.7,
+        max_tokens: 2000,
+      });
+
+      const content = completion.choices[0].message.content;
+      const outputDir = path.join(
+        __dirname,
+        "..",
+        "..",
+        "topics",
+        topic,
+        "modules"
+      );
+      const outputFile = path.join(
+        outputDir,
+        `${this.sanitizeFilename(moduleName)}.html`
+      );
+
+      await fs.mkdir(outputDir, { recursive: true });
+      await fs.writeFile(outputFile, content);
+
+      console.log(`Generated content for ${moduleName} in ${outputFile}`);
+      return outputFile;
+    } catch (error) {
+      console.error("Error generating content:", error);
+      throw error;
+    }
+  }
+
+  sanitizeFilename(filename) {
+    return filename
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+  }
 }
 
 // CLI interface
@@ -189,15 +246,15 @@ async function main() {
     const generator = new ContentGenerator();
     await generator.initialize();
 
-    const [, , topic, moduleTitle] = process.argv;
+    const [, , topic, moduleName] = process.argv;
 
-    if (!topic || !moduleTitle) {
-      console.error("Usage: node generate-content.js <topic> <moduleTitle>");
+    if (!topic || !moduleName) {
+      console.error("Usage: node generate-content.js <topic> <module-name>");
       process.exit(1);
     }
 
-    console.log(`Generating content for ${moduleTitle} in ${topic}...`);
-    const result = await generator.generateModule(topic, moduleTitle);
+    console.log(`Generating content for ${moduleName} in ${topic}...`);
+    const result = await generator.generateModule(topic, moduleName);
     console.log("Content generated successfully!");
     console.log("Files created:");
     console.log(`Markdown: ${result.markdown}`);
