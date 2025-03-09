@@ -1,0 +1,50 @@
+{
+  "topics": [
+    {
+      "name": "artificial-intelligence",
+      "displayName": "Artificial Intelligence",
+      "description": "Learn the fundamentals of AI and its applications",
+      "modules": [
+        {
+          "title": "Introduction to AI",
+          "difficulty": "beginner",
+          "prerequisites": [],
+          "estimatedTime": "45 minutes",
+          "keyTopics": ["What is AI", "Types of AI", "Real-world applications"]
+        },
+        {
+          "title": "Machine Learning Basics",
+          "difficulty": "beginner",
+          "prerequisites": ["Introduction to AI"],
+          "estimatedTime": "60 minutes",
+          "keyTopics": [
+            "Types of Machine Learning",
+            "Training and Testing",
+            "Common Applications"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "business",
+      "displayName": "Business Fundamentals",
+      "description": "Master the essentials of business and entrepreneurship",
+      "modules": [
+        {
+          "title": "Introduction to Business",
+          "difficulty": "beginner",
+          "prerequisites": [],
+          "estimatedTime": "45 minutes",
+          "keyTopics": [
+            "Business Basics",
+            "Types of Businesses",
+            "Business Models"
+          ]
+        }
+      ]
+    }
+  ],
+  "difficulties": ["beginner", "intermediate", "advanced"],
+  "contentTypes": ["text", "video", "quiz", "exercise"],
+  "templateVersion": "1.0"
+}
