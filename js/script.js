@@ -52,92 +52,57 @@ function extractKeyPoints(moduleContent) {
 
 async function sendMessage() {
   const userInput = document.getElementById("userInput");
-  const sendButton = document.getElementById("sendButton");
+  const message = userInput.value.trim();
 
-  if (!userInput || !userInput.value.trim()) return;
+  if (!message) return;
 
-  // Disable input and button while processing
-  userInput.disabled = true;
-  sendButton.disabled = true;
+  // Clear input
+  userInput.value = "";
 
   // Add user message to chat
-  const userMessage = userInput.value.trim();
-  addUserMessage(userMessage);
-
-  // Show typing indicator
-  showTypingIndicator();
+  addMessageToChat("user", message);
 
   try {
-    const requestBody = {
-      model: "gpt-4o",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are an AI tutor helping with AI fundamentals. Focus on clear, concise explanations.",
-        },
-        {
-          role: "user",
-          content:
-            userMessage.length > 200
-              ? truncateText(userMessage, 200)
-              : userMessage,
-        },
-      ],
-    };
-
-    // Make API call
-    const response = await fetch(API_URL, {
+    const response = await fetch("/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${API_KEY}`,
-        Accept: "application/json",
       },
-      body: JSON.stringify(requestBody),
+      body: JSON.stringify({ message }),
     });
 
-    const responseText = await response.text();
+    const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(
-        `API request failed with status ${response.status}: ${responseText}`
+    if (data.error) {
+      addMessageToChat(
+        "error",
+        "Sorry, there was an error processing your request."
       );
+      console.error(data.error);
+      return;
     }
 
-    const data = JSON.parse(responseText);
-
-    // Remove typing indicator
-    hideTypingIndicator();
-
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-      throw new Error(
-        "Unexpected API response format: " + JSON.stringify(data)
-      );
-    }
-
-    // Add bot response to chat
-    const message = data.choices[0].message.content;
-    addBotMessage(message);
+    // Add AI response to chat
+    addMessageToChat("ai", data.choices[0].message.content);
   } catch (error) {
-    console.error("Error:", error);
-    hideTypingIndicator();
-    if (error.message.includes("Free-tier limit")) {
-      addBotMessage(
-        "I apologize for the limitation. Please try asking your question in a shorter way."
-      );
-    } else {
-      addBotMessage(
-        "I apologize, but I'm having trouble connecting right now. Please try again."
-      );
-    }
+    addMessageToChat(
+      "error",
+      "Sorry, there was an error connecting to the server."
+    );
+    console.error(error);
   }
+}
 
-  // Re-enable input and button
-  userInput.value = "";
-  userInput.disabled = false;
-  sendButton.disabled = false;
-  userInput.focus();
+function addMessageToChat(type, content) {
+  const chatMessages = document.getElementById("chatMessages");
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `message ${type}-message`;
+
+  const icon = type === "user" ? "👤" : type === "ai" ? "🤖" : "⚠️";
+  messageDiv.innerHTML = `<span class="message-icon">${icon}</span> ${content}`;
+
+  chatMessages.appendChild(messageDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function addUserMessage(message) {
