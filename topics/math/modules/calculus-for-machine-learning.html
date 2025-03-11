@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculus for Machine Learning - Mathematics for AI | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a
+          href="../../../index.html"
+          style="text-decoration: none; color: inherit"
+          >LearnFast AI</a
+        >
+      </div>
+      <nav>
+        <a href="../../math.html">Back to Mathematics for AI</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: Calculus for Machine Learning</h1>
+  <p class="module-description">This module introduces the essential calculus concepts used in machine learning, focusing on differentiation, optimization, and their applications in AI. By mastering these concepts, you'll understand how algorithms learn and improve over time.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Derivatives</h3>
+    <div class="concept-content">
+      <p class="definition">A derivative measures how a function changes as its input changes. It represents the slope of the function at a given point.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Derivatives are used to find the rate of change of a function.</li>
+        <li>In machine learning, derivatives help optimize models by minimizing loss functions.</li>
+        <li>The chain rule is essential for computing gradients in neural networks.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Derivatives are the foundation of gradient-based optimization, which is central to training machine learning models. Without understanding derivatives, you cannot effectively tune models or improve their performance.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Derivatives tell you how to adjust model parameters to reduce errors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Gradient Descent</h3>
+    <div class="concept-content">
+      <p class="definition">Gradient descent is an optimization algorithm used to minimize a function by iteratively moving in the direction of the steepest descent, as defined by the negative of the gradient.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Gradient descent updates model parameters to minimize the loss function.</li>
+        <li>Learning rate controls the size of the steps taken during optimization.</li>
+        <li>Stochastic gradient descent (SGD) is a variant that uses random samples for faster computation.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Gradient descent is the backbone of training most machine learning models, including neural networks. It enables models to learn from data by minimizing errors.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Gradient descent helps models "learn" by adjusting parameters to reduce errors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Partial Derivatives</h3>
+    <div class="concept-content">
+      <p class="definition">A partial derivative measures how a function changes with respect to one of its variables while keeping the others constant.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Partial derivatives are used in multivariable functions, common in machine learning.</li>
+        <li>They are essential for computing gradients in models with multiple parameters.</li>
+        <li>Partial derivatives help understand the impact of individual features on the model's output.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Partial derivatives allow us to optimize models with multiple variables, which is critical for complex machine learning algorithms like deep learning.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Partial derivatives help us understand how each parameter affects the model's performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>These concepts form the core of calculus used in machine learning. By understanding derivatives, gradient descent, and partial derivatives, you'll have the tools to optimize models, interpret their behavior, and improve their performance. This foundation is sufficient to tackle most machine learning problems effectively.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the purpose of a derivative in machine learning?</li>
+    <li>How does gradient descent help in training a model?</li>
+    <li>Why are partial derivatives important for multivariable functions?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module covered the essential calculus concepts for machine learning, including derivatives, gradient descent, and partial derivatives. These tools are critical for optimizing models, understanding their behavior, and improving performance. With this knowledge, you're well-equipped to dive deeper into machine learning algorithms and their mathematical foundations.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>
+              📝 Note: We're using a free AI service that has a character limit.
+              Please keep your questions brief and concise (under 200
+              characters). For longer discussions, consider breaking your
+              question into smaller parts.
+            </p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask a question about what you've learned... (max 200 characters)"
+            aria-label="Your question"
+            maxlength="200"
+          />
+          <button id="sendButton">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button"
+          >Next Topic →</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

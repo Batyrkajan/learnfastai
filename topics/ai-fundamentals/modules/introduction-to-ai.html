@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to AI - AI Fundamentals | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+        </div>
+        <nav>
+            <a href="../../ai-fundamentals.html">Back to AI Fundamentals</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="module-header">
+  <h1>Module: Introduction to AI</h1>
+  <p class="module-description">This module provides a foundational understanding of Artificial Intelligence (AI), its core concepts, and its real-world applications. Learn the basics of AI, its significance, and how it powers modern technology.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>What is Artificial Intelligence?</h3>
+    <div class="concept-content">
+      <p class="definition">Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and make decisions like humans.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>AI systems can perform tasks like problem-solving, pattern recognition, and decision-making.</li>
+        <li>AI is powered by algorithms and data.</li>
+        <li>It includes subfields like machine learning, natural language processing, and computer vision.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>AI is transforming industries by automating tasks, improving efficiency, and enabling new capabilities like personalized recommendations and autonomous vehicles.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>AI is about creating smart machines that can perform tasks requiring human-like intelligence.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Machine Learning (ML)</h3>
+    <div class="concept-content">
+      <p class="definition">Machine Learning is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>ML uses algorithms to analyze data, identify patterns, and make predictions.</li>
+        <li>It relies on training data to improve accuracy over time.</li>
+        <li>Common types include supervised, unsupervised, and reinforcement learning.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>ML powers applications like recommendation systems, fraud detection, and voice assistants, making it a cornerstone of modern AI.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>ML is about teaching machines to learn from data and make decisions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-enough">
+    <h3>Why This Is Enough for Now</h3>
+    <p>By focusing on the 20% of AI concepts that deliver 80% of the value, you gain a solid foundation to understand how AI works and its impact on the world. This knowledge prepares you to explore more advanced topics or apply AI principles in real-world scenarios.</p>
+  </div>
+
+  <div class="interactive-questions">
+    <h3>Check Your Understanding</h3>
+    <div class="questions">
+      <p>1. What is the primary goal of Artificial Intelligence?</p>
+      <p>2. How does Machine Learning differ from traditional programming?</p>
+      <p>3. Name one real-world application of AI and explain how it works.</p>
+    </div>
+  </div>
+
+  <div class="module-summary">
+    <h3>Wrapping Up</h3>
+    <p>In this module, you learned the basics of AI, including its definition, key concepts like Machine Learning, and its real-world applications. Understanding these fundamentals equips you to explore AI further and recognize its impact on technology and society.</p>
+  </div>
+</section>
+
+        <!-- Chat Interface -->
+        <section class="chat-container">
+            <div class="chat-header">
+                <h3>Ask Questions About This Module</h3>
+                <div class="api-notice">
+                    <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters). For longer discussions, consider breaking your question into smaller parts.</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+                <button id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="next-topic">
+            <h3>Ready to Continue?</h3>
+               <p>Great job completing this section! Ready to learn more?</p>
+               <a href="machine-learning-basics.html" class="next-button">Next Topic: Machine Learning Basics →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chat functionality
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage('user', message);
+            input.value = '';
+
+            // Simulate AI response
+            setTimeout(() => {
+                addMessage('bot', 'I understand you have a question about ' + message + '. Let me help you with that...');
+            }, 1000);
+        }
+
+        function addMessage(type, content) {
+            const messages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type + '-message message';
+            messageDiv.textContent = content;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        // Initialize with a welcome message
+        addMessage('bot', 'Hi! I\'m your AI learning assistant. Feel free to ask any questions about this module!');
+    </script>
+</body>
+</html>
