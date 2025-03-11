@@ -1,6 +1,6 @@
 [build]
+  command = "npm run build:prod"
   publish = "content-generator/dashboard"
-  command = "npm run build"
 
 [functions]
   node_bundler = "esbuild"

@@ -7,7 +7,7 @@
     "start": "node content-generator/server.js",
     "clean": "rm -rf content-generator/dashboard || true",
     "create-dirs": "mkdir -p content-generator/dashboard/css content-generator/dashboard/js content-generator/dashboard/topics",
-    "copy-assets": "cp -r index.html css/* content-generator/dashboard/css/ && cp -r js/* content-generator/dashboard/js/ && cp -r topics/* content-generator/dashboard/topics/ || true",
+    "copy-assets": "cp index.html content-generator/dashboard/ && cp -r css/* content-generator/dashboard/css/ && cp -r js/* content-generator/dashboard/js/ && cp -r topics/* content-generator/dashboard/topics/ || true",
     "prebuild": "npm run clean && npm run create-dirs && npm run copy-assets",
     "build": "npm install && npm run prebuild",
     "build:prod": "NODE_ENV=production npm run build",
