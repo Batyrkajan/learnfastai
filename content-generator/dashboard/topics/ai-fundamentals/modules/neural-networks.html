@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Networks - AI Fundamentals | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+        </div>
+        <nav>
+            <a href="../../ai-fundamentals.html">Back to AI Fundamentals</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="module-header">
+  <h1>Module: Neural Networks</h1>
+  <p class="module-description">Neural Networks are the backbone of modern AI, mimicking the human brain to solve complex problems. This module breaks down the fundamentals, key concepts, and practical applications of neural networks in AI.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>What Are Neural Networks?</h3>
+    <div class="concept-content">
+      <p class="definition">Neural Networks are computational models inspired by the human brain, consisting of interconnected layers of nodes (neurons) that process and learn from data.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Neural networks consist of input, hidden, and output layers.</li>
+        <li>They use weights and biases to adjust connections between neurons.</li>
+        <li>Activation functions introduce non-linearity to the model.</li>
+        <li>Training involves forward propagation and backpropagation.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Neural networks power many AI applications, from image recognition to natural language processing. Understanding their structure and function is essential for building and optimizing AI systems.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Neural networks are like digital brains that learn patterns from data to make predictions or decisions.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Activation Functions</h3>
+    <div class="concept-content">
+      <p class="definition">Activation functions determine the output of a neuron, introducing non-linearity to the network and enabling it to learn complex patterns.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Common activation functions include ReLU, Sigmoid, and Tanh.</li>
+        <li>ReLU (Rectified Linear Unit) is widely used due to its simplicity and efficiency.</li>
+        <li>Activation functions help the network model non-linear relationships.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Without activation functions, neural networks would only be able to model linear relationships, severely limiting their capabilities.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Activation functions are the "switches" that decide whether a neuron should fire, enabling the network to learn complex patterns.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Backpropagation</h3>
+    <div class="concept-content">
+      <p class="definition">Backpropagation is the process of adjusting the weights and biases of a neural network by calculating the gradient of the loss function and propagating it backward through the network.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Backpropagation minimizes the error between predicted and actual outputs.</li>
+        <li>It uses the chain rule of calculus to compute gradients.</li>
+        <li>Optimizers like SGD (Stochastic Gradient Descent) update weights based on gradients.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Backpropagation is the core mechanism that allows neural networks to learn from data and improve their performance over time.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Backpropagation is how neural networks "learn" by adjusting their internal parameters to reduce errors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-enough">
+    <h3>Why This Is Enough for Now</h3>
+    <p>By focusing on the 20% of concepts that deliver 80% of the value, you now have a solid foundation in neural networks. This knowledge is sufficient to understand how they work, why they matter, and how they are applied in real-world AI systems.</p>
+  </div>
+
+  <div class="interactive-questions">
+    <h3>Check Your Understanding</h3>
+    <div class="questions">
+      <p>1. What are the three main layers of a neural network?</p>
+      <p>2. Why are activation functions important in neural networks?</p>
+      <p>3. Explain the role of backpropagation in training a neural network.</p>
+    </div>
+  </div>
+
+  <div class="module-summary">
+    <h3>Wrapping Up</h3>
+    <p>Neural networks are powerful tools for solving complex problems in AI. By understanding their structure, activation functions, and training process, you can grasp how they learn and make predictions. This foundational knowledge prepares you to explore more advanced topics in AI and machine learning.</p>
+  </div>
+</section>
+
+        <!-- Chat Interface -->
+        <section class="chat-container">
+            <div class="chat-header">
+                <h3>Ask Questions About This Module</h3>
+                <div class="api-notice">
+                    <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters). For longer discussions, consider breaking your question into smaller parts.</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+                <button id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="next-topic">
+            <h3>Ready to Continue?</h3>
+               <p>Great job completing this section! Ready to learn more?</p>
+               <a href="introduction-to-ai.html" class="next-button">Next Topic: Introduction to AI →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chat functionality
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage('user', message);
+            input.value = '';
+
+            // Simulate AI response
+            setTimeout(() => {
+                addMessage('bot', 'I understand you have a question about ' + message + '. Let me help you with that...');
+            }, 1000);
+        }
+
+        function addMessage(type, content) {
+            const messages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type + '-message message';
+            messageDiv.textContent = content;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        // Initialize with a welcome message
+        addMessage('bot', 'Hi! I\'m your AI learning assistant. Feel free to ask any questions about this module!');
+    </script>
+</body>
+</html>

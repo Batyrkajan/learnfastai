@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      LearnFast AI - Master Complex Topics with AI-Powered 80/20 Learning
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .beta-notice {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .beta-notice h2 {
+        color: #92400e;
+        margin-bottom: 0.5rem;
+      }
+
+      .beta-notice p {
+        color: #78350f;
+        margin: 0;
+      }
+
+      .feedback-section {
+        background-color: #f8fafc;
+        padding: 3rem 1rem;
+        margin-top: 4rem;
+      }
+
+      .feedback-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .feedback-form {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .feedback-form h2 {
+        color: #1e40af;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #1e293b;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .submit-button {
+        background-color: #2563eb;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        width: 100%;
+      }
+
+      .submit-button:hover {
+        background-color: #1e40af;
+      }
+
+      .feedback-list {
+        margin-top: 3rem;
+      }
+
+      .feedback-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .feedback-item .meta {
+        color: #64748b;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .feedback-item .content {
+        color: #1e293b;
+      }
+
+      .feedback-type {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+
+      .feedback-type.feature {
+        background-color: #e0f2fe;
+        color: #0369a1;
+      }
+
+      .feedback-type.improvement {
+        background-color: #f0fdf4;
+        color: #166534;
+      }
+
+      .feedback-type.bug {
+        background-color: #fef2f2;
+        color: #991b1b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">LearnFast AI</div>
+      <nav>
+        <!-- Navigation will be minimal for MVP -->
+        <a href="#available-topics">Available Topics</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Beta Notice -->
+      <div class="beta-notice">
+        <h2>🚀 Beta Version</h2>
+        <p>
+          Welcome to LearnFast AI Beta! We're continuously adding new topics and
+          features. Your feedback helps us improve and grow. Check back often
+          for updates!
+        </p>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Master AI, Data Science, and More - 80% Faster</h1>
+        <p class="sub-headline">
+          Focus on the essential 20% of knowledge to gain 80% understanding,
+          guided by AI-curated study paths across multiple disciplines.
+        </p>
+        <div class="cta-buttons">
+          <a href="#available-topics" class="cta-button">Explore All Topics</a>
+          <a href="topics/ai-fundamentals.html" class="cta-button secondary"
+            >Start with AI Fundamentals</a
+          >
+        </div>
+      </section>
+
+      <!-- What is 80/20 Learning Section -->
+      <section class="learning-principle">
+        <h2>What is 80/20 Learning?</h2>
+        <p>
+          The 80/20 principle, also known as the Pareto Principle, suggests that
+          roughly 80% of results come from 20% of efforts. We apply this to
+          learning by identifying and focusing on the most crucial concepts that
+          provide the greatest understanding.
+        </p>
+      </section>
+
+      <!-- Available Topics -->
+      <section id="available-topics" class="topics">
+        <h2>Available Topics</h2>
+        <div class="topic-card">
+          <h3>AI Fundamentals</h3>
+          <p>
+            Learn the core concepts of AI, including machine learning, neural
+            networks, and ethical considerations. Perfect for beginners who want
+            to understand how AI works.
+          </p>
+          <a href="topics/ai-fundamentals.html" class="learn-more-button"
+            >Start Learning</a
+          >
+        </div>
+
+        <div class="topic-card">
+          <h3>Mathematics for AI</h3>
+          <p>
+            Master the essential mathematical concepts needed for AI and machine
+            learning, including linear algebra, calculus, probability, and
+            optimization methods.
+          </p>
+          <a href="topics/math.html" class="learn-more-button"
+            >Start Learning</a
+          >
+        </div>
+
+        <div class="topic-card">
+          <h3>Data Science</h3>
+          <p>
+            Explore data analysis, visualization, statistical methods, and
+            machine learning techniques used in data science to extract insights
+            from complex datasets.
+          </p>
+          <a href="topics/data-science.html" class="learn-more-button"
+            >Start Learning</a
+          >
+        </div>
+
+        <div class="topic-card">
+          <h3>Python for AI</h3>
+          <p>
+            Learn Python programming specifically for AI development, including
+            essential libraries like NumPy, Pandas, scikit-learn, and
+            TensorFlow.
+          </p>
+          <a href="topics/python-for-ai.html" class="learn-more-button"
+            >Start Learning</a
+          >
+        </div>
+
+        <div class="topic-card">
+          <h3>Business Analytics</h3>
+          <p>
+            Discover how to leverage data for business decision-making,
+            including predictive analytics, data visualization, and business
+            intelligence tools.
+          </p>
+          <a href="topics/business-analytics.html" class="learn-more-button"
+            >Start Learning</a
+          >
+        </div>
+
+        <!-- Coming Soon Topics -->
+        <div class="coming-soon">
+          <h3>More Topics Coming Soon!</h3>
+          <p>We're working on adding more topics including:</p>
+          <ul>
+            <li>Data Science Fundamentals</li>
+            <li>Web Development Basics</li>
+            <li>Business Analytics</li>
+            <li>And more...</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Feedback Section -->
+      <section id="feedback" class="feedback-section">
+        <div class="feedback-container">
+          <div class="feedback-form">
+            <h2>Help Us Improve! 💡</h2>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+              <div class="form-group">
+                <label for="feedbackType">Type of Feedback</label>
+                <select id="feedbackType" required>
+                  <option value="feature">Feature Request</option>
+                  <option value="improvement">Improvement Suggestion</option>
+                  <option value="bug">Bug Report</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="feedbackTitle">Title</label>
+                <input
+                  type="text"
+                  id="feedbackTitle"
+                  placeholder="Brief description of your feedback"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="feedbackContent">Details</label>
+                <textarea
+                  id="feedbackContent"
+                  placeholder="Share your thoughts, ideas, or report issues..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-button">
+                Submit Feedback
+              </button>
+            </form>
+          </div>
+
+          <!-- Recent Feedback -->
+          <div class="feedback-list">
+            <h3>Recent Feedback</h3>
+            <div id="recentFeedback">
+              <!-- Feedback items will be added here dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Handle feedback submission
+      async function submitFeedback(event) {
+        event.preventDefault();
+
+        const feedbackData = {
+          type: document.getElementById("feedbackType").value,
+          title: document.getElementById("feedbackTitle").value,
+          content: document.getElementById("feedbackContent").value,
+          timestamp: new Date().toISOString(),
+        };
+
+        try {
+          const response = await fetch("/api/feedback", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(feedbackData),
+          });
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const savedFeedback = await response.json();
+          addFeedbackToDisplay(savedFeedback);
+          event.target.reset();
+          alert("Thank you for your feedback!");
+        } catch (error) {
+          console.error("Error submitting feedback:", error);
+          alert(
+            "There was an error submitting your feedback. Please try again."
+          );
+        }
+      }
+
+      function addFeedbackToDisplay(feedback) {
+        const feedbackList = document.getElementById("recentFeedback");
+        const feedbackElement = document.createElement("div");
+        feedbackElement.className = "feedback-item";
+
+        feedbackElement.innerHTML = `
+          <div class="meta">
+            ${new Date(feedback.timestamp).toLocaleDateString()}
+            <span class="feedback-type ${feedback.type}">${feedback.type}</span>
+          </div>
+          <div class="content">
+            <strong>${feedback.title}</strong>
+            <p>${feedback.content}</p>
+          </div>
+        `;
+
+        feedbackList.insertBefore(feedbackElement, feedbackList.firstChild);
+      }
+
+      // Load existing feedback when the page loads
+      async function loadExistingFeedback() {
+        try {
+          const response = await fetch("/api/feedback");
+          if (!response.ok) {
+            throw new Error("Failed to load feedback");
+          }
+          const feedback = await response.json();
+          feedback.forEach(addFeedbackToDisplay);
+        } catch (error) {
+          console.error("Error loading feedback:", error);
+        }
+      }
+
+      // Load feedback when the page loads
+      loadExistingFeedback();
+    </script>
+  </body>
+</html>

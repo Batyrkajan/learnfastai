@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimization Methods - Mathematics for AI | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a
+          href="../../../index.html"
+          style="text-decoration: none; color: inherit"
+          >LearnFast AI</a
+        >
+      </div>
+      <nav>
+        <a href="../../math.html">Back to Mathematics for AI</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: Optimization Methods</h1>
+  <p class="module-description">Optimization methods are essential tools in AI for finding the best solutions to complex problems. This module explores key techniques used to minimize or maximize functions, which are critical for training machine learning models and solving real-world AI challenges.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Gradient Descent</h3>
+    <div class="concept-content">
+      <p class="definition">Gradient Descent is an iterative optimization algorithm used to minimize a function by moving in the direction of the steepest descent, as defined by the negative of the gradient.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Works by iteratively updating parameters to reduce the cost function.</li>
+        <li>Requires a learning rate to control step size.</li>
+        <li>Can get stuck in local minima for non-convex functions.</li>
+        <li>Variants include Stochastic Gradient Descent (SGD) and Mini-batch Gradient Descent.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Gradient Descent is the backbone of training most machine learning models, including neural networks. It enables efficient parameter tuning to achieve optimal performance.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Gradient Descent helps AI models learn by minimizing errors step by step.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Convex Optimization</h3>
+    <div class="concept-content">
+      <p class="definition">Convex Optimization involves minimizing convex functions, where any local minimum is also the global minimum.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Convex functions have a single global minimum.</li>
+        <li>Algorithms like Gradient Descent are guaranteed to converge for convex problems.</li>
+        <li>Widely used in linear regression, support vector machines, and more.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Convex Optimization provides a reliable framework for solving many AI problems efficiently, ensuring optimal solutions.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Convex Optimization guarantees the best solution for certain types of problems.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Genetic Algorithms</h3>
+    <div class="concept-content">
+      <p class="definition">Genetic Algorithms are search-based optimization techniques inspired by natural selection, using operations like mutation, crossover, and selection.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Works with a population of candidate solutions.</li>
+        <li>Ideal for non-differentiable or discontinuous functions.</li>
+        <li>Used in hyperparameter tuning and complex optimization problems.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Genetic Algorithms are versatile and can solve problems where traditional methods fail, making them valuable in AI for exploring large solution spaces.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Genetic Algorithms mimic evolution to find optimal solutions in complex scenarios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>These concepts cover the foundational optimization methods used in AI. Understanding Gradient Descent, Convex Optimization, and Genetic Algorithms provides a strong basis for tackling most optimization challenges in machine learning and AI applications.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the primary purpose of Gradient Descent in AI?</li>
+    <li>Why is Convex Optimization considered reliable for certain problems?</li>
+    <li>How do Genetic Algorithms differ from traditional optimization methods?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>Optimization methods are critical for AI, enabling models to learn and improve. This module introduced Gradient Descent for iterative minimization, Convex Optimization for guaranteed solutions, and Genetic Algorithms for exploring complex spaces. Mastering these techniques equips you to solve a wide range of AI problems effectively.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>
+              📝 Note: We're using a free AI service that has a character limit.
+              Please keep your questions brief and concise (under 200
+              characters). For longer discussions, consider breaking your
+              question into smaller parts.
+            </p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask a question about what you've learned... (max 200 characters)"
+            aria-label="Your question"
+            maxlength="200"
+          />
+          <button id="sendButton">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button"
+          >Next Topic →</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

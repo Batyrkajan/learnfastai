@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Big Data Technologies - Data Science | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a
+          href="../../../index.html"
+          style="text-decoration: none; color: inherit"
+          >LearnFast AI</a
+        >
+      </div>
+      <nav>
+        <a href="../../data-science.html">Back to Data Science</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: Big Data Technologies</h1>
+  <p class="module-description">This module explores the foundational technologies and tools used in Big Data, focusing on their role in Data Science. Learn how these technologies enable the processing, storage, and analysis of massive datasets to drive insights and decision-making.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Hadoop</h3>
+    <div class="concept-content">
+      <p class="definition">Hadoop is an open-source framework designed for distributed storage and processing of large datasets across clusters of computers.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Uses HDFS (Hadoop Distributed File System) for storage.</li>
+        <li>Relies on MapReduce for parallel processing.</li>
+        <li>Scalable and fault-tolerant.</li>
+        <li>Ideal for batch processing of large datasets.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Hadoop revolutionized Big Data by enabling cost-effective storage and processing of massive datasets, making it a cornerstone of modern Data Science workflows.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Hadoop is the backbone of Big Data processing, allowing organizations to handle data at scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Apache Spark</h3>
+    <div class="concept-content">
+      <p class="definition">Apache Spark is a fast, in-memory data processing engine designed for large-scale data analytics and machine learning.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Faster than Hadoop due to in-memory processing.</li>
+        <li>Supports batch, streaming, and iterative processing.</li>
+        <li>Integrates with machine learning libraries like MLlib.</li>
+        <li>Works with Hadoop for enhanced functionality.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Spark accelerates data processing and analytics, making it essential for real-time applications and advanced machine learning tasks.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Spark is the go-to tool for fast, versatile data processing and analytics.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>NoSQL Databases</h3>
+    <div class="concept-content">
+      <p class="definition">NoSQL databases are non-relational databases designed to handle unstructured or semi-structured data at scale.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Types include document-based (e.g., MongoDB), key-value (e.g., Redis), and graph-based (e.g., Neo4j).</li>
+        <li>Highly scalable and flexible.</li>
+        <li>Optimized for high-speed read/write operations.</li>
+        <li>Ideal for real-time applications and big data.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>NoSQL databases address the limitations of traditional relational databases, enabling efficient handling of diverse and large-scale datasets.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>NoSQL databases are essential for managing unstructured data and scaling applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Understanding Hadoop, Spark, and NoSQL databases provides a solid foundation for working with Big Data technologies. These tools cover the core aspects of data storage, processing, and analysis, enabling you to tackle most real-world Data Science challenges.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the primary advantage of using Hadoop over traditional databases?</li>
+    <li>How does Apache Spark improve upon Hadoop's MapReduce?</li>
+    <li>Name one use case where a NoSQL database would be more suitable than a relational database.</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module introduced the key Big Data technologies: Hadoop for distributed storage and processing, Apache Spark for fast data analytics, and NoSQL databases for handling unstructured data. Together, these tools form the backbone of modern Data Science workflows, enabling efficient and scalable data management and analysis.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>
+              📝 Note: We're using a free AI service that has a character limit.
+              Please keep your questions brief and concise (under 200
+              characters). For longer discussions, consider breaking your
+              question into smaller parts.
+            </p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask a question about what you've learned... (max 200 characters)"
+            aria-label="Your question"
+            maxlength="200"
+          />
+          <button id="sendButton">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button"
+          >Next Topic →</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

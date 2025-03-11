@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumPy and Pandas - Python for AI | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a
+          href="../../../index.html"
+          style="text-decoration: none; color: inherit"
+          >LearnFast AI</a
+        >
+      </div>
+      <nav>
+        <a href="../../python-for-ai.html">Back to Python for AI</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: NumPy and Pandas</h1>
+  <p class="module-description">NumPy and Pandas are essential libraries in Python for data manipulation and analysis, forming the backbone of AI and machine learning workflows. This module covers the core concepts and practical applications of these libraries.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>NumPy Arrays</h3>
+    <div class="concept-content">
+      <p class="definition">NumPy arrays are multi-dimensional, homogeneous data structures that allow efficient numerical computations.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Arrays are faster and more memory-efficient than Python lists.</li>
+        <li>Supports vectorized operations for element-wise calculations.</li>
+        <li>Common functions include <code>np.array()</code>, <code>np.zeros()</code>, and <code>np.reshape()</code>.</li>
+        <li>Broadcasting allows operations on arrays of different shapes.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>NumPy arrays are the foundation for numerical computations in AI, enabling efficient handling of large datasets and mathematical operations.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use NumPy arrays for fast, efficient numerical computations in Python.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Pandas DataFrames</h3>
+    <div class="concept-content">
+      <p class="definition">Pandas DataFrames are two-dimensional, tabular data structures with labeled axes (rows and columns), ideal for data manipulation and analysis.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>DataFrames can handle heterogeneous data types.</li>
+        <li>Common operations include filtering, grouping, and merging data.</li>
+        <li>Key functions: <code>pd.DataFrame()</code>, <code>df.head()</code>, <code>df.describe()</code>.</li>
+        <li>Supports reading and writing data from/to CSV, Excel, and SQL.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>DataFrames simplify data cleaning, exploration, and preprocessing, which are critical steps in AI and machine learning pipelines.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use Pandas DataFrames for structured data manipulation and analysis.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Data Cleaning with Pandas</h3>
+    <div class="concept-content">
+      <p class="definition">Data cleaning involves handling missing values, removing duplicates, and transforming data into a usable format.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use <code>df.dropna()</code> to remove missing values.</li>
+        <li><code>df.fillna()</code> replaces missing values with a specified value.</li>
+        <li><code>df.drop_duplicates()</code> removes duplicate rows.</li>
+        <li>Convert data types using <code>df.astype()</code>.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Clean data is essential for accurate AI models, as poor-quality data can lead to unreliable predictions.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Always clean your data before using it in AI workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Mastering NumPy arrays and Pandas DataFrames provides a solid foundation for handling data in AI. These tools cover 80% of the tasks you'll encounter in data preprocessing, analysis, and manipulation, making them indispensable for AI practitioners.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the main advantage of using NumPy arrays over Python lists?</li>
+    <li>How would you handle missing values in a Pandas DataFrame?</li>
+    <li>Explain the purpose of broadcasting in NumPy.</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module introduced the core concepts of NumPy and Pandas, focusing on their roles in AI and data science. You learned about NumPy arrays for efficient numerical computations, Pandas DataFrames for structured data manipulation, and essential data cleaning techniques. These tools are fundamental for building robust AI systems.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>
+              📝 Note: We're using a free AI service that has a character limit.
+              Please keep your questions brief and concise (under 200
+              characters). For longer discussions, consider breaking your
+              question into smaller parts.
+            </p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Ask a question about what you've learned... (max 200 characters)"
+            aria-label="Your question"
+            maxlength="200"
+          />
+          <button id="sendButton">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button"
+          >Next Topic →</a
+        >
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

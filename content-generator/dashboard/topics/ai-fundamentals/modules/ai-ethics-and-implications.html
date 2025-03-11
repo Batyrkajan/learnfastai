@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ethics and Implications - AI Fundamentals | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+        </div>
+        <nav>
+            <a href="../../ai-fundamentals.html">Back to AI Fundamentals</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="module-header">
+  <h1>Module: AI Ethics and Implications</h1>
+  <p class="module-description">This module explores the ethical considerations and societal impacts of artificial intelligence, focusing on fairness, accountability, transparency, and the potential consequences of AI systems in real-world applications.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Bias in AI</h3>
+    <div class="concept-content">
+      <p class="definition">Bias in AI refers to systematic errors or unfair outcomes in AI systems, often due to skewed training data or flawed algorithms.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Bias can arise from historical data, human prejudices, or incomplete datasets.</li>
+        <li>It can lead to unfair treatment of certain groups in areas like hiring, lending, and law enforcement.</li>
+        <li>Mitigating bias requires diverse datasets, algorithmic audits, and ethical design practices.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Bias in AI can perpetuate inequality and harm marginalized communities, undermining trust in AI systems and their applications.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>AI systems are only as fair as the data and design behind them—bias must be actively identified and addressed.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Transparency and Explainability</h3>
+    <div class="concept-content">
+      <p class="definition">Transparency in AI refers to the ability to understand how an AI system makes decisions, while explainability focuses on providing clear reasoning for those decisions.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Complex AI models like deep learning can be "black boxes," making it hard to trace decisions.</li>
+        <li>Explainability is crucial for accountability, especially in high-stakes fields like healthcare and criminal justice.</li>
+        <li>Regulations like GDPR require transparency in automated decision-making.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Without transparency, users and stakeholders cannot trust or challenge AI decisions, leading to potential misuse or harm.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>AI systems should be designed to explain their decisions in a way that humans can understand and verify.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Accountability in AI</h3>
+    <div class="concept-content">
+      <p class="definition">Accountability in AI refers to the responsibility of developers, organizations, and users for the outcomes of AI systems.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Clear accountability frameworks are needed to assign responsibility for AI-related harms.</li>
+        <li>This includes legal, ethical, and technical accountability.</li>
+        <li>Organizations must ensure AI systems align with ethical guidelines and regulations.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Without accountability, harmful AI outcomes can go unchecked, eroding public trust and causing societal harm.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Everyone involved in AI development and deployment must take responsibility for its impacts.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-enough">
+    <h3>Why This Is Enough for Now</h3>
+    <p>By focusing on bias, transparency, and accountability, you’ve covered the 20% of AI ethics concepts that drive 80% of the impact. These foundational ideas will help you navigate the ethical challenges of AI in any context.</p>
+  </div>
+
+  <div class="interactive-questions">
+    <h3>Check Your Understanding</h3>
+    <div class="questions">
+      <p>1. What are the main sources of bias in AI systems?</p>
+      <p>2. Why is explainability important in high-stakes AI applications?</p>
+      <p>3. How can organizations ensure accountability in AI development?</p>
+    </div>
+  </div>
+
+  <div class="module-summary">
+    <h3>Wrapping Up</h3>
+    <p>AI ethics is about ensuring fairness, transparency, and accountability in AI systems. By addressing bias, promoting explainability, and establishing accountability frameworks, we can build AI that benefits society while minimizing harm. These principles are essential for responsible AI development and deployment.</p>
+  </div>
+</section>
+
+        <!-- Chat Interface -->
+        <section class="chat-container">
+            <div class="chat-header">
+                <h3>Ask Questions About This Module</h3>
+                <div class="api-notice">
+                    <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters). For longer discussions, consider breaking your question into smaller parts.</p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+                <button id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="next-topic">
+            <h3>Ready to Continue?</h3>
+               <p>Great job completing this section! Ready to learn more?</p>
+               <a href="introduction-to-ai.html" class="next-button">Next Topic: Introduction to AI →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chat functionality
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage('user', message);
+            input.value = '';
+
+            // Simulate AI response
+            setTimeout(() => {
+                addMessage('bot', 'I understand you have a question about ' + message + '. Let me help you with that...');
+            }, 1000);
+        }
+
+        function addMessage(type, content) {
+            const messages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type + '-message message';
+            messageDiv.textContent = content;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        // Initialize with a welcome message
+        addMessage('bot', 'Hi! I\'m your AI learning assistant. Feel free to ask any questions about this module!');
+    </script>
+</body>
+</html>
