@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R Programming Fundamentals - Advanced Programming | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../advanced-programming.html">Back to Advanced Programming</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: R Programming Fundamentals</h1>
+  <p class="module-description">This module covers the essential concepts of advanced programming in R, focusing on the 20% of knowledge that delivers 80% of the results. Learn key techniques, best practices, and why these concepts are critical for efficient R programming.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Functions in R</h3>
+    <div class="concept-content">
+      <p class="definition">Functions are reusable blocks of code that perform specific tasks. They help in modularizing code and improving readability.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use the <code>function()</code> keyword to define a function.</li>
+        <li>Functions can accept arguments and return values.</li>
+        <li>Default arguments can be set for flexibility.</li>
+        <li>Use <code>return()</code> to explicitly return a value.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Functions reduce code duplication, improve maintainability, and make debugging easier. They are fundamental to writing efficient and scalable R programs.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Functions are your go-to tool for reusable and organized code.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Vectorization</h3>
+    <div class="concept-content">
+      <p class="definition">Vectorization is the process of applying operations to entire vectors or matrices instead of using loops, making code faster and more efficient.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>R is optimized for vectorized operations.</li>
+        <li>Use functions like <code>apply()</code>, <code>lapply()</code>, and <code>sapply()</code> for vectorized computations.</li>
+        <li>Avoid explicit loops when possible.</li>
+        <li>Vectorized code is often faster and more concise.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Vectorization improves performance and readability, especially when working with large datasets. It leverages R's built-in optimizations for faster execution.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Think in vectors, not loops, for efficient R programming.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Data Frames</h3>
+    <div class="concept-content">
+      <p class="definition">Data frames are tabular data structures in R, similar to spreadsheets or SQL tables, used to store and manipulate structured data.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Create data frames using <code>data.frame()</code>.</li>
+        <li>Access columns using <code>$</code> or <code>[]</code>.</li>
+        <li>Use <code>subset()</code> or <code>dplyr</code> for filtering and manipulation.</li>
+        <li>Combine data frames with <code>rbind()</code> and <code>cbind()</code>.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Data frames are the backbone of data analysis in R. They allow you to handle structured data efficiently, making them essential for data science workflows.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Master data frames to unlock the full potential of R for data analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>By focusing on functions, vectorization, and data frames, you cover the core concepts that power most R programming tasks. These tools enable you to write efficient, scalable, and maintainable code, which is essential for both beginners and advanced users.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the purpose of the <code>return()</code> function in R?</li>
+    <li>Why is vectorization preferred over loops in R?</li>
+    <li>How do you filter rows in a data frame using the <code>dplyr</code> package?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module introduced the fundamentals of advanced R programming, focusing on functions, vectorization, and data frames. These concepts form the foundation for writing efficient and scalable R code, enabling you to tackle complex data analysis tasks with confidence.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

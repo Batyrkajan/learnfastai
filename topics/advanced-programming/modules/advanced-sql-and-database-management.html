@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced SQL and Database Management - Advanced Programming | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../advanced-programming.html">Back to Advanced Programming</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: Advanced SQL and Database Management</h1>
+  <p class="module-description">This module dives into advanced SQL techniques and database management strategies, equipping you with the skills to optimize queries, manage complex data relationships, and ensure database performance and security.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Indexing</h3>
+    <div class="concept-content">
+      <p class="definition">Indexing is a database optimization technique that improves the speed of data retrieval operations by creating a data structure (index) that allows for faster lookup.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Indexes are created on columns frequently used in WHERE, JOIN, and ORDER BY clauses.</li>
+        <li>Primary keys are automatically indexed.</li>
+        <li>Over-indexing can slow down write operations (INSERT, UPDATE, DELETE).</li>
+        <li>Common types include B-tree, Hash, and Full-text indexes.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Indexing significantly improves query performance, especially in large databases, by reducing the number of rows scanned during data retrieval.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use indexes wisely to speed up read-heavy operations, but avoid over-indexing to maintain write performance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Stored Procedures</h3>
+    <div class="concept-content">
+      <p class="definition">Stored procedures are precompiled SQL statements stored in the database that can be executed with a single call, often used to encapsulate complex logic.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Reduce network traffic by executing multiple SQL statements in one call.</li>
+        <li>Improve performance by precompiling and caching execution plans.</li>
+        <li>Enhance security by restricting direct access to tables.</li>
+        <li>Can accept parameters and return results.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Stored procedures streamline database operations, improve security, and reduce redundancy by centralizing business logic within the database.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use stored procedures to encapsulate and reuse complex SQL logic, improving efficiency and security.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Transactions and ACID Properties</h3>
+    <div class="concept-content">
+      <p class="definition">A transaction is a sequence of database operations treated as a single unit, ensuring data integrity through ACID properties: Atomicity, Consistency, Isolation, and Durability.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Atomicity ensures all operations in a transaction succeed or fail together.</li>
+        <li>Consistency maintains database rules and constraints.</li>
+        <li>Isolation ensures transactions don't interfere with each other.</li>
+        <li>Durability guarantees that committed transactions persist even after system failures.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Transactions ensure data integrity and reliability, especially in systems where multiple users or processes interact with the database simultaneously.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use transactions to ensure data integrity and reliability in multi-step database operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Mastering these advanced SQL and database management concepts provides a strong foundation for optimizing database performance, ensuring data integrity, and managing complex data relationships. These skills are essential for building scalable, secure, and efficient database systems.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the primary purpose of indexing in a database?</li>
+    <li>How do stored procedures improve database performance?</li>
+    <li>Explain the importance of the ACID properties in database transactions.</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module covered advanced SQL and database management techniques, including indexing, stored procedures, and transactions. By understanding these concepts, you can optimize database performance, ensure data integrity, and manage complex data relationships effectively. These skills are critical for building robust and scalable database systems.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

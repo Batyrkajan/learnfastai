@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Development - Web Development | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../web-development.html">Back to Web Development</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: React Development</h1>
+  <p class="module-description">React is a powerful JavaScript library for building user interfaces, particularly single-page applications. This module will guide you through the essential concepts and tools needed to master React development.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>Components</h3>
+    <div class="concept-content">
+      <p class="definition">Components are the building blocks of a React application. They are reusable, self-contained pieces of code that return HTML elements.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Components can be functional or class-based.</li>
+        <li>Functional components are simpler and use hooks for state management.</li>
+        <li>Props are used to pass data between components.</li>
+        <li>Components can be nested to create complex UIs.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Components make your code modular, reusable, and easier to maintain. They allow you to break down complex UIs into smaller, manageable pieces.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Think of components as LEGO blocks—combine them to build your application.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>State and Props</h3>
+    <div class="concept-content">
+      <p class="definition">State is a built-in React object used to store data that can change over time. Props are read-only attributes passed from a parent component to a child component.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>State is mutable and managed within a component.</li>
+        <li>Props are immutable and used to pass data down the component tree.</li>
+        <li>Use `useState` hook to manage state in functional components.</li>
+        <li>State changes trigger re-renders of the component.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>State and props are fundamental to creating dynamic and interactive applications. They enable components to react to user input and data changes.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>State is for internal data, props are for external data.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Hooks</h3>
+    <div class="concept-content">
+      <p class="definition">Hooks are functions that let you "hook into" React state and lifecycle features from functional components.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>`useState` is used to manage state in functional components.</li>
+        <li>`useEffect` is used to perform side effects like data fetching.</li>
+        <li>Hooks must be used at the top level of a component.</li>
+        <li>Custom hooks allow you to reuse logic across components.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Hooks simplify state management and side effects in functional components, making them more powerful and easier to use.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Hooks let you use state and lifecycle features without writing a class.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Mastering these core concepts—components, state, props, and hooks—will give you a solid foundation to build most React applications. These are the tools you'll use 80% of the time, allowing you to focus on solving real-world problems efficiently.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the difference between state and props?</li>
+    <li>How do you manage state in a functional component?</li>
+    <li>What is the purpose of the `useEffect` hook?</li>
+    <li>Can you pass props from a child component to a parent component? Why or why not?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>React is a powerful library for building dynamic user interfaces. By understanding components, state, props, and hooks, you can create modular, reusable, and efficient applications. These concepts form the backbone of React development and will enable you to tackle most challenges in building modern web applications.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

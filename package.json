@@ -14,6 +14,7 @@
     "dev": "cross-env NODE_ENV=development nodemon content-generator/server.js",
     "generate": "node content-generator/scripts/generate-content.js",
     "generate-topic": "node content-generator/scripts/generate-topic.js",
+    "generate-new-topics": "node content-generator/scripts/generate-new-topics-2024.js",
     "validate": "node content-generator/scripts/validate-content.js",
     "check-security": "npm audit"
   },

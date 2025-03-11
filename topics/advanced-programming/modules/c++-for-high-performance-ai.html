@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C++ for High-Performance AI - Advanced Programming | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../advanced-programming.html">Back to Advanced Programming</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: C++ for High-Performance AI</h1>
+  <p class="module-description">This module focuses on advanced C++ programming techniques essential for building high-performance AI systems. Learn how to optimize code, leverage modern C++ features, and design efficient algorithms for AI applications.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+  
+  <div class="concept-card">
+    <h3>Memory Management</h3>
+    <div class="concept-content">
+      <p class="definition">Memory management in C++ involves controlling how memory is allocated and deallocated to optimize performance and avoid leaks.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use smart pointers (e.g., `std::unique_ptr`, `std::shared_ptr`) to automate memory management.</li>
+        <li>Avoid raw pointers to prevent memory leaks and dangling pointers.</li>
+        <li>Understand stack vs. heap memory allocation and their trade-offs.</li>
+        <li>Use RAII (Resource Acquisition Is Initialization) to ensure resources are properly released.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Efficient memory management is critical for high-performance AI systems, as memory leaks and inefficient allocations can lead to significant performance bottlenecks.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use smart pointers and RAII to manage memory safely and efficiently.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Concurrency and Parallelism</h3>
+    <div class="concept-content">
+      <p class="definition">Concurrency and parallelism involve executing multiple tasks simultaneously to improve performance, especially in AI workloads.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use `std::thread` and `std::async` for multi-threading.</li>
+        <li>Leverage `std::mutex` and `std::atomic` for thread safety.</li>
+        <li>Understand the difference between concurrency (tasks overlap) and parallelism (tasks execute simultaneously).</li>
+        <li>Use parallel algorithms from the C++17 standard library for performance gains.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>AI systems often require heavy computation, and leveraging concurrency and parallelism can significantly reduce execution time.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use multi-threading and parallel algorithms to speed up AI computations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Template Metaprogramming</h3>
+    <div class="concept-content">
+      <p class="definition">Template metaprogramming allows you to write code that executes at compile time, enabling highly optimized and reusable components.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use templates to create generic functions and classes.</li>
+        <li>Leverage `constexpr` for compile-time computations.</li>
+        <li>Understand type traits and SFINAE (Substitution Failure Is Not An Error) for advanced template usage.</li>
+        <li>Use variadic templates for functions that accept any number of arguments.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Template metaprogramming enables highly efficient and reusable code, which is essential for building scalable AI systems.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use templates and `constexpr` to write efficient, reusable code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>These concepts cover the core techniques needed to write high-performance C++ code for AI. By mastering memory management, concurrency, and template metaprogramming, you can build efficient, scalable, and maintainable AI systems.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the difference between `std::unique_ptr` and `std::shared_ptr`?</li>
+    <li>How does RAII help prevent memory leaks?</li>
+    <li>What is the advantage of using parallel algorithms in C++17?</li>
+    <li>How can template metaprogramming improve AI system performance?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module covered advanced C++ techniques critical for high-performance AI development. You learned about memory management with smart pointers, concurrency and parallelism for faster computations, and template metaprogramming for efficient and reusable code. These skills will help you build robust and scalable AI systems.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

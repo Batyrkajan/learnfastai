@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumPy and Pandas Mastery - Advanced Programming | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../advanced-programming.html">Back to Advanced Programming</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: NumPy and Pandas Mastery</h1>
+  <p class="module-description">This module dives into advanced programming techniques using NumPy and Pandas, two essential libraries for data manipulation and analysis in Python. Learn how to efficiently handle large datasets, perform complex operations, and optimize your code for real-world applications.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>NumPy Arrays</h3>
+    <div class="concept-content">
+      <p class="definition">NumPy arrays are multi-dimensional, homogeneous data structures that allow efficient numerical computations.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Arrays are faster than Python lists for numerical operations.</li>
+        <li>Supports vectorized operations for efficient computation.</li>
+        <li>Common operations include reshaping, slicing, and broadcasting.</li>
+        <li>Essential for linear algebra, statistics, and matrix operations.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>NumPy arrays are the foundation of numerical computing in Python. They enable high-performance operations on large datasets, making them indispensable for data science and machine learning.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use NumPy arrays for fast, efficient numerical computations on large datasets.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Pandas DataFrames</h3>
+    <div class="concept-content">
+      <p class="definition">Pandas DataFrames are two-dimensional, labeled data structures that allow flexible data manipulation and analysis.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>DataFrames can handle heterogeneous data types.</li>
+        <li>Supports indexing, filtering, and grouping operations.</li>
+        <li>Integrates seamlessly with NumPy for numerical computations.</li>
+        <li>Essential for data cleaning, exploration, and visualization.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Pandas DataFrames simplify working with structured data, making it easier to clean, analyze, and visualize datasets. They are a cornerstone of data analysis in Python.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Use Pandas DataFrames for structured data manipulation and analysis.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Vectorized Operations</h3>
+    <div class="concept-content">
+      <p class="definition">Vectorized operations allow you to perform computations on entire arrays or DataFrames without explicit loops.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Faster than traditional loops due to optimized C implementations.</li>
+        <li>Supported by both NumPy and Pandas.</li>
+        <li>Common operations include arithmetic, aggregation, and filtering.</li>
+        <li>Reduces code complexity and improves readability.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Vectorized operations significantly improve performance and efficiency, especially when working with large datasets. They are a key feature of NumPy and Pandas.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Always prefer vectorized operations over loops for faster and cleaner code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Mastering NumPy and Pandas is about understanding the core concepts that drive efficiency and productivity. By focusing on arrays, DataFrames, and vectorized operations, you can handle most data manipulation tasks with ease. These tools are widely used in industry and academia, making them essential for any data professional.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the main advantage of using NumPy arrays over Python lists?</li>
+    <li>How does a Pandas DataFrame differ from a NumPy array?</li>
+    <li>Why are vectorized operations faster than traditional loops?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module covered the essentials of NumPy and Pandas, focusing on arrays, DataFrames, and vectorized operations. These tools are critical for efficient data manipulation and analysis. By mastering these concepts, you can tackle complex datasets and optimize your workflows effectively.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

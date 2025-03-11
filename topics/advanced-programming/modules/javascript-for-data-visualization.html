@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript for Data Visualization - Advanced Programming | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../advanced-programming.html">Back to Advanced Programming</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: JavaScript for Data Visualization</h1>
+  <p class="module-description">This module explores advanced JavaScript techniques for creating dynamic and interactive data visualizations. Learn how to leverage libraries like D3.js and Chart.js to transform raw data into meaningful visual insights.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>D3.js Basics</h3>
+    <div class="concept-content">
+      <p class="definition">D3.js (Data-Driven Documents) is a JavaScript library for manipulating documents based on data, enabling the creation of dynamic and interactive visualizations.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Uses SVG, HTML, and CSS for rendering.</li>
+        <li>Data binding with <code>.data()</code> and <code>.enter()</code>.</li>
+        <li>Scales (<code>d3.scaleLinear()</code>, <code>d3.scaleTime()</code>) for mapping data to visual properties.</li>
+        <li>Transitions and animations for interactivity.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>D3.js is the industry standard for creating custom, data-driven visualizations. It provides fine-grained control over every aspect of the visualization, making it ideal for complex datasets.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>D3.js is a powerful tool for creating custom visualizations by binding data to the DOM and applying transformations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Chart.js Essentials</h3>
+    <div class="concept-content">
+      <p class="definition">Chart.js is a simple yet flexible JavaScript library for creating responsive and customizable charts.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Supports bar, line, pie, and radar charts.</li>
+        <li>Uses a declarative configuration approach.</li>
+        <li>Responsive by default.</li>
+        <li>Easy to integrate with minimal setup.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Chart.js is perfect for quickly creating standard charts with minimal code. It’s ideal for projects where simplicity and speed are prioritized over customization.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Chart.js is a beginner-friendly library for creating standard charts with minimal effort.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Data Binding in D3.js</h3>
+    <div class="concept-content">
+      <p class="definition">Data binding is the process of associating data with DOM elements, enabling dynamic updates based on data changes.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Use <code>.data()</code> to bind data to elements.</li>
+        <li><code>.enter()</code> creates new elements for unmatched data.</li>
+        <li><code>.exit()</code> removes elements with no corresponding data.</li>
+        <li><code>.update()</code> modifies existing elements.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Data binding is the core of D3.js, enabling dynamic and responsive visualizations that update automatically as data changes.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Data binding in D3.js allows you to create visualizations that dynamically reflect changes in your data.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Scales and Axes</h3>
+    <div class="concept-content">
+      <p class="definition">Scales map data values to visual properties like position, color, or size. Axes provide reference lines for interpreting scales.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Common scales: <code>d3.scaleLinear()</code>, <code>d3.scaleTime()</code>, <code>d3.scaleOrdinal()</code>.</li>
+        <li>Axes are created using <code>d3.axisBottom()</code>, <code>d3.axisLeft()</code>, etc.</li>
+        <li>Scales ensure data fits within the visualization space.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Scales and axes are essential for accurately representing data and making visualizations interpretable.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Scales map data to visual properties, while axes provide context for interpreting the data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>Mastering these concepts gives you the foundation to create a wide range of data visualizations. By understanding D3.js and Chart.js, you can handle both custom and standard visualizations, making you versatile in data-driven development.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the purpose of <code>.enter()</code> in D3.js?</li>
+    <li>Which library would you use to quickly create a bar chart: D3.js or Chart.js? Why?</li>
+    <li>How do scales help in data visualization?</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>This module covered the essentials of JavaScript for data visualization, focusing on D3.js and Chart.js. You learned about data binding, scales, axes, and how to create both custom and standard visualizations. With these tools, you can transform raw data into meaningful and interactive visual stories.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

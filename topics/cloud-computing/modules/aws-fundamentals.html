@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Fundamentals - Cloud Computing | LearnFast AI</title>
+    <link rel="stylesheet" href="../../../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" style="text-decoration: none; color: inherit">LearnFast AI</a>
+      </div>
+      <nav>
+        <a href="../../cloud-computing.html">Back to Cloud Computing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="module-header">
+  <h1>Module: AWS Fundamentals</h1>
+  <p class="module-description">This module introduces the core concepts of cloud computing with a focus on Amazon Web Services (AWS). Learn the foundational principles, key services, and why cloud computing is essential for modern businesses.</p>
+</section>
+
+<section class="study-guide">
+  <h2>80/20 Study Guide - Key Concepts</h2>
+
+  <div class="concept-card">
+    <h3>What is Cloud Computing?</h3>
+    <div class="concept-content">
+      <p class="definition">Cloud computing is the on-demand delivery of IT resources over the internet with pay-as-you-go pricing. Instead of owning physical servers, you access services like computing power, storage, and databases from providers like AWS.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>On-demand access to computing resources.</li>
+        <li>Pay-as-you-go pricing model.</li>
+        <li>No need to manage physical infrastructure.</li>
+        <li>Scalability and flexibility are key benefits.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>Cloud computing eliminates the need for upfront infrastructure investment, reduces operational costs, and enables businesses to scale quickly. It’s the backbone of modern IT solutions.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>Cloud computing lets you use IT resources like electricity—only pay for what you use.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>AWS Global Infrastructure</h3>
+    <div class="concept-content">
+      <p class="definition">AWS operates data centers in multiple geographic regions worldwide, each consisting of Availability Zones (AZs) for high availability and fault tolerance.</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>Regions are geographic areas with multiple AZs.</li>
+        <li>AZs are isolated data centers within a region.</li>
+        <li>Edge Locations improve content delivery speed.</li>
+        <li>Global infrastructure ensures low latency and high availability.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>AWS’s global infrastructure ensures your applications are fast, reliable, and accessible to users worldwide. It also provides redundancy to prevent downtime.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>AWS’s global network ensures your apps are always available and fast, no matter where your users are.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h3>Core AWS Services</h3>
+    <div class="concept-content">
+      <p class="definition">AWS offers a wide range of services, but a few core ones are essential for most applications: EC2 (compute), S3 (storage), and RDS (databases).</p>
+      
+      <h4>The 20% You Need to Know:</h4>
+      <ul class="key-points">
+        <li>EC2: Virtual servers for running applications.</li>
+        <li>S3: Scalable object storage for files and backups.</li>
+        <li>RDS: Managed relational databases like MySQL and PostgreSQL.</li>
+        <li>IAM: Manages user access and permissions.</li>
+      </ul>
+
+      <div class="why-it-matters">
+        <h4>Why It Matters:</h4>
+        <p>These services form the foundation of most AWS solutions. Understanding them allows you to build, deploy, and manage applications effectively.</p>
+      </div>
+
+      <div class="simple-takeaway">
+        <h4>Simple Takeaway:</h4>
+        <p>EC2, S3, and RDS are the building blocks of AWS—master these to get started.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-this-is-enough">
+  <h2>Why This Is Enough</h2>
+  <p>This guide focuses on the 20% of AWS concepts that deliver 80% of the value. By understanding cloud computing basics, AWS global infrastructure, and core services, you’ll have a solid foundation to explore more advanced topics or start building on AWS.</p>
+</section>
+
+<section class="interactive-questions">
+  <h2>Interactive Questions</h2>
+  <ol>
+    <li>What is the pay-as-you-go pricing model in cloud computing?</li>
+    <li>How do AWS Availability Zones improve fault tolerance?</li>
+    <li>Name three core AWS services and their primary use cases.</li>
+  </ol>
+</section>
+
+<section class="module-summary">
+  <h2>Module Summary</h2>
+  <p>In this module, you learned the basics of cloud computing, AWS’s global infrastructure, and core services like EC2, S3, and RDS. These concepts are essential for understanding how AWS works and how to leverage it for your projects. With this foundation, you’re ready to dive deeper into AWS or start building your own cloud solutions.</p>
+</section>
+
+      <!-- Chat Interface -->
+      <section class="chat-container">
+        <div class="chat-header">
+          <h3>Ask Questions About This Module</h3>
+          <div class="api-notice">
+            <p>📝 Note: We're using a free AI service that has a character limit. Please keep your questions brief and concise (under 200 characters).</p>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ask a question about what you've learned... (max 200 characters)" aria-label="Your question" maxlength="200">
+          <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <div class="next-topic">
+        <h3>Ready to Continue?</h3>
+        <p>Great job completing this section! Ready to learn more?</p>
+        <a href="#" class="next-button">Next Topic →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 LearnFast AI. All rights reserved.</p>
+    </footer>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>
